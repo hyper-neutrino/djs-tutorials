@@ -14,6 +14,8 @@ You should have also gotten a program called `npm` (Node Package Manager). You w
 
 ### Setting up an environment
 
+I personally use VSCode for developing in JavaScript. You should use whatever you are most comfortable with, but if you haven't used any before, my recommendations would be VSCode or Atom.
+
 Set up a workspace the same way you usually would, preferably with a folder dedicated to your project. This can be a git repository or just a normal folder if you don't plan on using git.
 
 To begin, open your console in this folder. If you are on Windows, you can right click in File Explorer inside your folder and click "Open Terminal Here" (you may need to press shift + right click if this option does not show up). Other operating systems likely have a similar option.
@@ -346,6 +348,20 @@ for (let x = 0; x < 10; x++) {
 This will output all numbers from 0 to 9 except 5. If you replace the `continue` with `break`, it will output 0 to 4, and then when it reaches 5, it will instead just exit the loop and stop the future iterations as well.
 
 Finally, except for the do-while loop, you can remove the `{}` if you only have one statement.
+
+### Destructuring Assignment
+
+Lastly, let's look at destructuring assignment. Firstly, in JavaScript, objects are created using the syntax `{ name: value, name: value, ... }`. For example, we could do `const x = { a: 3, b: 4 }`. The value can be anything including other objects, and the name should be just a name or it can also be a string. To access these values, we can do `x["a"]` or `x.a`. The property names do not need to be valid variable names; for example, I could do `const x = { "!": 1 }` and then do `x["!"]`; however, then I would not be able to do `x.!`.
+
+Another quick note: `{ a }` is valid if `a` is defined here; it is equivalent to `{ a: a }`.
+
+Destructuring assignment essentially attempts to match the structure of the object to the structure of the left side of the assignment. For example, let's say we have an object `let x = { a: 1, b: [ 3, 4 ] }`. Then, if I do `let { a } = x`, this will assign `a` equal to `1` and ignore `b`. Basically, it matches the structure so since on the left side I want an object with a property `a`, it looks on the right side and gets the property `a` of the object `x`. If I do `let { b } = x`, then `b` now equals `[3, 4]`.
+
+This also works on lists: if I `let x = [1, 2, 3]` and then `let [a, b] = x`, now `a == 1` and `b == 2`.
+
+Destructuring assignment is extremely powerful especially because you can actually nest it. Consider the following example: `let x = [1, { a: 2, b: 3 }]`. Now, if I do `let [q, { a, b }] = x`, we get `q == 1`, `a == 2`, and `b == 3`.
+
+What if you want to do `let a = x.b`; that is, you don't want to keep the same name? That is quite simple - just do `let { b: a } = x`. Basically, this will find the property `b` of `x` and then assign it to `a` instead of `b`.
 
 ---
 

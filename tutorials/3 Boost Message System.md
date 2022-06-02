@@ -45,7 +45,7 @@ You can now run the bot and test it by boosting your server, which is unfortunat
 
 You probably don't want to just send a plaintext message and want to make a fancy embed. You can take a look at [`MessageOptions`](https://discord.js.org/#/docs/discord.js/stable/typedef/MessageOptions) (which extends [`BaseMessageOptions`](https://discord.js.org/#/docs/discord.js/stable/typedef/BaseMessageOptions)) on the documentation to figure out how to construct the message yourself. You can also use something like Discohook and create the message and then click the "JSON Data Editor" button in the bottom left and copy-paste the JSON data into your program. Let's use a basic example:
 
-[![][1]][1]
+[![boost message example][1]][1]
 
 Firstly, we need to obtain the message content. How do we mention a user? You may know that the format is `<@ID>`, so we could do `"<@" + after.id + ">"`. Using string interpolation, we could also do `` `<@${after.id}>` ``. How this works is that when we denote a string using backticks, it is a template string, and then we can insert code inside `${ ... }` which will be evaluated when that string is evaluated, obtaining a dynamic result. In this case, we just insert `after.id` into the `<@ ... >`. However, discord.js has an even simpler method: `after.toString()` will simply return the string that is needed to mention the user.
 

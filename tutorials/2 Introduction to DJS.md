@@ -256,11 +256,11 @@ You can read the documentation for each of these methods [here](https://discord.
 
 To reply here, we will simply call `await interaction.reply("Pong!");`. Add this line inside the inner `if` statement and restart your bot, then run `/ping`. You should get something like the following:
 
-[![][1]][1]
+[![command response][1]][1]
 
 Something else that you can do with interactions that you cannot with normal message commands is keep them _completely hidden_ from other users. Try replacing your reply line with the following: `await interaction.reply({ ephemeral: true, content: "Pong!" });`. You will see the following when you restart your bot and run the command again:
 
-[![][2]][2]
+[![ephemeral command response][2]][2]
 
 Once you start having a lot of commands, I would recommend that you either extract your command logic to functions and call them from within the handler, or you can do something like the following:
 

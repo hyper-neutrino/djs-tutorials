@@ -137,4 +137,4 @@ client.on("memberUpdate", async (before, after) => {
 
 Of course, you should put in your own data and decorations, and you can look into things like modifying the footer as well or adding a large image at the bottom, but you should now have your first discord.js bot feature, a simple boost message system. Next time, we'll make a QOTD system that allows trusted users (probably staff) to insert questions into a question bank that will be posted daily.
 
-    [1]: https://i.imgur.com/apBPBwc.png
+[1]: https://i.imgur.com/apBPBwc.png

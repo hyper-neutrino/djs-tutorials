@@ -284,5 +284,5 @@ Now, to delete this command, just remove the command from the list and run the b
 
 Congratulations on your first Discord bot in DJS! Next time, we will make a simple boost message system that will detect when someone boosts your server and send a thank-you message.
 
-    [1]: https://i.imgur.com/kwkThm8.png
-    [2]: https://i.imgur.com/1IfjNAE.png
+[1]: https://i.imgur.com/kwkThm8.png
+[2]: https://i.imgur.com/1IfjNAE.png
